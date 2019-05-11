@@ -8,12 +8,16 @@ import * as serviceWorker from './serviceWorker';
 import Router from './Router';
 
 
-const reducer = (state = 0, action) => {
+const reducer = (
+    state =  {
+        count: 0,
+    }, 
+    action) => {
     switch (action.type) {
         case 'INCREMENT':
-            return state = state + 1;
+            return {count: state.count + 1};
         case 'DECREMENT':
-            return state = state - 1;
+            return {count: state.count - 1};
         default:
             return state;
     }
