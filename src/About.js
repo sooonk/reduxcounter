@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import Header from './Header.js'
+import Footer from './Footer.js'
 
 
 class About extends Component {
     render() {
         return (
             <div className="App">
-
-                <Link to='/'>Home</Link>
+                <Header />
                 <p>{this.props.count}</p>
                 <button onClick={this.props.increment}>+</button>
                 <button onClick={this.props.decrement}>-</button>
 
                 <p>ABOUT</p>
+                <Footer />
             </div>
         );
     }

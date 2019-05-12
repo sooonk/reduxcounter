@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  
+
 }
 
 .App-logo {
@@ -30,4 +32,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+.header{
+  padding: 20px;
+  background-color: #282c34;
+  color: aliceblue;
+}
+
+.counter{
+  margin: 20px;
+}
+.content{
+  margin: 20px;
+  margin-left: 20%;
+  padding: 20px;
+  text-align: justify;
+  width: 60%;
+  position: relative;
+}
+.footer{
+  background-color: #282c34;
+  color: aliceblue;
+  height: 50px;
+  line-height: 50px;
+  bottom: 0;
+  width: 100%;
+}
+.newsletter{
+  margin: 20px;
 }

@@ -7,20 +7,22 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Router from './Router';
 
-
-const reducer = (
-    state =  {
-        count: 0,
-    }, 
-    action) => {
+const myState = {
+    count: 0,
+    email: '',
+}
+const reducer = (state = myState,action) => {
     switch (action.type) {
+        case 'ADD_EMAIL':
+            return state = {...state, email: action.email}
         case 'INCREMENT':
-            return {count: state.count + 1};
+            return state = {...state, count: state.count + 1};
         case 'DECREMENT':
-            return {count: state.count - 1};
+            return state = {...state, count: state.count - 1};
         default:
             return state;
     }
+
 };
 
 const store = createStore(reducer,
